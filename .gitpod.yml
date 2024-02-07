@@ -2,4 +2,9 @@ tasks:
   - init: docker build -t getting-started .
     command: docker run -dp 127.0.0.1:3000:3000 getting-started
 
+ports:
+  - port: 3000
+    onOpen: open-preview
+    visibility: private
+
 
